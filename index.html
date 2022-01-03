@@ -23,7 +23,7 @@
             </div>
           </nav>
           <br>
-          <div class="container">
+          <div class="container-fluid-no-padding">
             <div class="row">
                 <div class="col-6 border-right" style="display: inline-block; text-align: center;">
                     <h3>Personenbezogene Daten</h3>
@@ -32,16 +32,16 @@
                     <br>
                     <br>
                     <br>
-                    <form>
+                    <form style="text-align: left; padding-left: 50px;">
                         <div class="form-group row">
-                          <label for="nameInput" class="col-sm-2 col-form-label">Name</label>
-                          <div class="col-sm-10">
+                          <label for="nameInput" class="col-sm-4 col-form-label">Name</label>
+                          <div class="col-sm-6">
                             <input type="text" class="form-control" id="nameInput">
                           </div>
                         </div>
                         <div class="form-group row">
-                          <label for="ageSelect" class="col-sm-2 col-form-label">Altersgruppe</label>
-                          <div class="col-sm-10">
+                          <label for="ageSelect" class="col-sm-4 col-form-label">Altersgruppe</label>
+                          <div class="col-sm-6">
                             <select class="form-control" id="ageSelect">
                                 <option>17-25</option>
                                 <option>25-40</option>
@@ -51,8 +51,8 @@
                           </div>
                         </div>
                         <div class="form-group row">
-                            <label for="bonusMalusSelect" class="col-sm-2 col-form-label">Bonus/Malus</label>
-                            <div class="col-sm-10">
+                            <label for="bonusMalusSelect" class="col-sm-4 col-form-label">Bonus/Malus</label>
+                            <div class="col-sm-6">
                               <select class="form-control" id="bonusMalusSelect">
                                   <option>0</option>
                                   <option>1</option>
@@ -72,14 +72,14 @@
                 <div class="col-6" style="display: inline-block; text-align: center;">
                     <h3>Fahrzeugbezogene Daten</h3>
                     <br>
-                    <form>
+                    <form style="text-align: left; padding-left: 50px;">
                         <div class="form-group">
                           <label for="exampleFormControlFile1">Zulassungsschein hochladen (Daten werden automatisch ausgelesen)</label>
                           <input type="file" class="form-control-file" id="exampleFormControlFile1">
                         </div>
                         <div class="form-group row" style="padding-top: 15px;">
-                            <label for="brandSelect" class="col-sm-2 col-form-label">Marke</label>
-                            <div class="col-sm-10">
+                            <label for="brandSelect" class="col-sm-4 col-form-label">Marke</label>
+                            <div class="col-sm-6">
                               <select class="form-control" id="brandSelect">
                                   <option>Alfa-Romeo</option>
                                   <option>Audi</option>
@@ -102,14 +102,95 @@
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label for="modelSelect" class="col-sm-2 col-form-label">Modell</label>
-                            <div class="col-sm-10">
+                            <label for="modelSelect" class="col-sm-4 col-form-label">Modell</label>
+                            <div class="col-sm-6">
                               <select class="form-control" id="modelSelect">
                                   <option>Bitte wählen</option>
                                 </select>
                             </div>
                           </div>
+                          <div class="form-group row">
+                            <label for="ezSelect" class="col-sm-4 col-form-label">Erstzulassung</label>
+                            <div class="col-sm-6">
+                              <select class="form-control" id="ezSelect">
+                                  <option>2022</option>
+                                  <option>2021</option>
+                                  <option>2020</option>
+                                  <option>2019</option>
+                                  <option>2018</option>
+                                  <option>2017</option>
+                                  <option>2016</option>
+                                  <option>2015</option>
+                                  <option>2014</option>
+                                  <option>2013</option>
+                                  <option>2012</option>
+                                  <option>2011</option>
+                                  <option>2010</option>
+                                  <option>2009</option>
+                                  <option>2008</option>
+                                  <option>2007</option>
+                                  <option>2006</option>
+                                  <option>2005</option>
+                                  <option>2004</option>
+                                  <option>2003</option>
+                                  <option>2002</option>
+                                  <option>2001</option>
+                                  <option>2000</option>
+                                </select>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="motorSelect" class="col-sm-4 col-form-label">Motorleistung</label>
+                            <div class="col-sm-6">
+                              <select class="form-control" id="motorSelect">
+                                  <option>0 - 40 KW</option>
+                                  <option>41 - 60 KW</option>
+                                  <option>61 - 80 KW</option>
+                                  <option>81 - 100 KW</option>
+                                  <option>101 - 120 KW</option>
+                                  <option>121 - 140 KW</option>
+                                  <option>141 - 160 KW</option>
+                                  <option>161 - 180 KW</option>
+                                  <option>über 180 KW</option>   
+                                </select>
+                            </div>
+                          </div>
                       </form>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-12" style="display: inline-block; text-align: center;">
+                    <h3>Auswahl Deckungsumfang</h3>
+                    <br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Haftpflicht</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Teilkasko</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                        <label class="form-check-label" for="inlineRadio3">Vollkasko</label>
+                      </div>
+                </div>               
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-12" style="display: inline-block; text-align: center;">
+                    <div class="btn-group float-sm-left" role="group" aria-label="Basic example" style="padding-left: 100px;">
+                        <button type="button" style="margin-right: 20px;" class="btn btn-secondary">Eingabe leeren</button>
+                        <button type="button" style="margin-right: 20px;" class="btn btn-secondary">Neu berechnen auf Basis gespeicherter Daten</button>
+                        <button type="button" class="btn btn-secondary">Daten für später speichern</button>
+                      </div>
+                    <div class="btn-group float-sm-right" role="group" aria-label="Basic example" style="padding-right: 100px;">
+                        <a href="vergleichsseite.html" role="button" class="btn btn-primary btn-lg">Jetzt vergleichen</a>
+                      </div>
                 </div>
             </div>
         </div>
