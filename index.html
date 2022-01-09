@@ -32,18 +32,18 @@
                     <br>
                     <br>
                     <br>
-                    <form style="text-align: left; padding-left: 50px;" action="vergleichsseite.html">
+                    <form id="myForm1" style="text-align: left; padding-left: 50px;">
                         <div class="form-group row">
                           <label for="nameInput" class="col-sm-4 col-form-label">Name</label>
                           <div class="col-sm-6">
-                            <input type="text" class="form-control" id="nameInput" required>
+                            <input type="text" class="form-control" id="nameInput">
                           </div>
                         </div>
                         <div class="form-group row">
-                          <label for="ageSelect" class="col-sm-4 col-form-label">Altersgruppe</label>
+                          <label for="ageSelect" class="col-sm-4 col-form-label">Altersgruppe *</label>
                           <div class="col-sm-6">
                             <select class="form-control" id="ageSelect" required>
-                                <option disabled selected value> -- Bitte wählen -- </option>
+                                <option selected value=""> -- Bitte wählen -- </option>
                                 <option>17-25</option>
                                 <option>25-40</option>
                                 <option>40-65</option>
@@ -52,9 +52,10 @@
                           </div>
                         </div>
                         <div class="form-group row">
-                            <label for="bonusMalusSelect" class="col-sm-4 col-form-label">Bonus/Malus</label>
+                            <label for="bonusMalusSelect" class="col-sm-4 col-form-label">Bonus/Malus *</label>
                             <div class="col-sm-6">
-                              <select class="form-control" id="bonusMalusSelect">
+                              <select class="form-control" id="bonusMalusSelect" required>
+                                  <option selected value=""> -- Bitte wählen -- </option>
                                   <option>0</option>
                                   <option>1</option>
                                   <option>2</option>
@@ -73,16 +74,16 @@
                 <div class="col-6" style="display: inline-block; text-align: center;">
                     <h3>Fahrzeugbezogene Daten</h3>
                     <br>
-                    <form style="text-align: left; padding-left: 50px;" action="vergleichsseite.html">
+                    <form id="myForm2" style="text-align: left; padding-left: 50px;">
                         <div class="form-group">
                           <label for="exampleFormControlFile1">Zulassungsschein hochladen (Daten werden automatisch ausgelesen)</label>
                           <input type="file" class="form-control-file" id="exampleFormControlFile1">
                         </div>
                         <div class="form-group row" style="padding-top: 15px;">
-                            <label for="brandSelect" class="col-sm-4 col-form-label">Marke</label>
+                            <label for="brandSelect" class="col-sm-4 col-form-label">Marke *</label>
                             <div class="col-sm-6">
                               <select class="form-control" id="brandSelect" required>
-                                <option disabled selected value> -- Bitte wählen -- </option>
+                                  <option selected value=""> -- Bitte wählen -- </option>
                                   <option>Alfa-Romeo</option>
                                   <option>Audi</option>
                                   <option>BMW</option>
@@ -112,9 +113,10 @@
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label for="ezSelect" class="col-sm-4 col-form-label">Erstzulassung</label>
+                            <label for="ezSelect" class="col-sm-4 col-form-label">Erstzulassung *</label>
                             <div class="col-sm-6">
-                              <select class="form-control" id="ezSelect">
+                              <select class="form-control" id="ezSelect" required>
+                                <option selected value=""> -- Bitte wählen -- </option>
                                   <option>2022</option>
                                   <option>2021</option>
                                   <option>2020</option>
@@ -142,9 +144,10 @@
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label for="motorSelect" class="col-sm-4 col-form-label">Motorleistung</label>
+                            <label for="motorSelect" class="col-sm-4 col-form-label">Motorleistung *</label>
                             <div class="col-sm-6">
-                              <select class="form-control" id="motorSelect">
+                              <select class="form-control" id="motorSelect" required>
+                                 <option selected value=""> -- Bitte wählen -- </option>
                                   <option>0 - 40 KW</option>
                                   <option>41 - 60 KW</option>
                                   <option>61 - 80 KW</option>
@@ -159,7 +162,7 @@
                           </div>
                       </form>
                 </div>
-            </div>
+            </div>           
             <br>
             <br>
             <div class="row">
@@ -181,6 +184,8 @@
                 </div>               
             </div>
             <br>
+            <p style="padding-left: 30px;">Die mit * gekennzeichneten Felder sind Pflichtfelder</p>
+            <br>
             <br>
             <br>
             <div class="row">
@@ -192,26 +197,56 @@
                       </div>
                     <div class="btn-group float-sm-right" role="group" aria-label="Basic example" style="padding-right: 100px;">
                         <!-- <a href="vergleichsseite.html" type="submit" class="btn btn-primary btn-lg submit">Jetzt vergleichen</a> -->
-                        <button id="submit" class="btn btn-primary btn-lg">Jetzt vergleichen</button>
+                        <button id="validateboth" type="submit" class="btn btn-primary btn-lg">Jetzt vergleichen</button>
                       </div>
                 </div>
             </div>
         </div>
+        <footer class="bg-light text-center text-lg-start fixed-bottom">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2022 Copyright: KFZ Versicherungsvergleich by Stefan Neuwirth
+            </div>
+            <!-- Copyright -->
+          </footer>
     </main>
     
 
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script>
-    document.getElementById( 'submit' ).addEventListener( 'click', function () {
-    // check for and report errors here
-    for( var index = 0; index < document.forms.length; index++ ) {
-        document.forms[index].submit();
-    };
-} );
+    $(document).ready(function() {
+
+        $('#validateboth').on('click', function(e) {
+            e.preventDefault();
+            var forms = $('[id^="myform"]');
+            forms.each(function() {
+                $(this).valid();
+            });
+            // if ($('#myForm1')[0].checkValidity() && $('#myForm2')[0].checkValidity()) {
+            //     window.location.href = "vergleichsseite.html";
+            // }
+            // else{
+            //     window.location.href = "vergleichsseite.html";
+                
+            // }
+
+            if ($('#myForm1')[0].checkValidity()) {
+                if($('#myForm2')[0].checkValidity()){
+                    window.location.href = "vergleichsseite.html";
+                }
+                else{
+                    $('#myForm2')[0].reportValidity(); 
+                }             
+            }
+            else{
+                $('#myForm1')[0].reportValidity();                
+            }
+        });
+    });
 </script>
 
 </body>
